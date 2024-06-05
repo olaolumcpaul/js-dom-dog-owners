@@ -79,21 +79,17 @@ document.addEventListener("DOMContentLoaded", () => {
     dogSection.innerHTML = ""; // Clear the current dog card
 
     const form = document.createElement("form");
+    form.className = "form";
     form.innerHTML = `
             <h2>Add a New Dog</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br>
-            <br>
             <label for="bio">Bio:</label>
-            <br>
             <textarea id="bio" name="bio" required></textarea><br>
-            <br>
             <label for="image">Image URL:</label>
             <input type="url" id="image" name="image" required><br>
-            <br>
             <label for="isGoodDog">Is Good Dog:</label>
             <input type="checkbox" id="isGoodDog" name="isGoodDog"><br>
-            <br>
             <input type="submit" id="submit" name="submit" value="Let's add a dog!" class="form__button">
         `;
     dogSection.appendChild(form);
